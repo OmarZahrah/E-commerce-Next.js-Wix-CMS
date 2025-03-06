@@ -24,7 +24,7 @@ const Filter = () => {
           placeholder="max price"
           className="text-xs rounded-2xl pl-2 w-24 ring-1 ring-gray-400"
         />
-        {/* TODO: Filter Categories */}
+        {/*Filter Categories */}
         <select
           name="cat"
           className="py-2 px-4 rounded-2xl text-xs font-medium bg-[#EBEDED]"

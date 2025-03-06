@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ListPage = () => {
   return (
-    <div className="px-4 md:px-8 lg:px-16 xl:px-32 2xl-px-64">
+    <div className="padding-section">
       {/* CAMPAIGN */}
       <div className=" hidden h-64 sm:flex justify-between p-4 bg-pink-50">
         <div className="w-2/3 flex flex-col items-center justify-center gap-8">
