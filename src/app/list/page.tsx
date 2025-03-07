@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import Filter from "@/components/Filter";
 import Image from "next/image";
 
@@ -11,9 +12,7 @@ const ListPage = () => {
             Grab up to 50% off on
             <br /> Selected Products
           </h1>
-          <button className="rounded-3xl bg-brandPink text-white w-max py-3 px-5 text-sm">
-            Buy Now
-          </button>
+          <Button rounded="md">Buy Now</Button>
         </div>
         <div className="relative w-1/3">
           <Image

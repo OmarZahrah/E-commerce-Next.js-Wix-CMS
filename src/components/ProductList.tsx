@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 const ProductList = () => {
   return (
@@ -29,9 +30,9 @@ const ProductList = () => {
           <span className="font-semibold">$49</span>
         </div>
         <div className="text-sm text-gray-500">My description</div>
-        <button className="rounded-2xl ring-1 ring-brandPink text-brandPink py-2 px-4 hover:bg-brandPink hover:text-white w-max">
+        <Button variant="outline" size="lg" rounded="full">
           Add To Cart
-        </button>
+        </Button>
       </Link>
       <Link
         href="/test"
@@ -58,9 +59,9 @@ const ProductList = () => {
           <span className="font-semibold">$49</span>
         </div>
         <div className="text-sm text-gray-500">My description</div>
-        <button className="rounded-2xl ring-1 ring-brandPink text-brandPink py-2 px-4 hover:bg-brandPink hover:text-white w-max">
+        <Button variant="outline" size="lg" rounded="full">
           Add To Cart
-        </button>
+        </Button>
       </Link>
     </div>
   );
