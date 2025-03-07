@@ -6,7 +6,7 @@ import NavIcons from "./NavIcons";
 
 const Navbar = () => {
   return (
-    <header className="h-20 px-4 md:px-8 lg:px-16 xl:px-32 2xl-px-64 relative">
+    <header className="h-20 padding-section relative ">
       {/* Mobile Screens */}
       <div className="md:hidden flex justify-between items-center h-full ">
         <Link href="/">
@@ -23,13 +23,27 @@ const Navbar = () => {
             <span className="text-2xl tracking-wide">ZAHRA</span>
           </Link>
           <nav className="hidden xl:flex gap-4">
-            <Link href="/"> Home </Link>
-            <Link href="/"> Shop </Link>
-            <Link href="/"> Deals </Link>
-            <Link href="/"> About </Link>
-            <Link href="/"> Contact </Link>
-            <Link href="/"> Logout </Link>
-            <Link href="/"> Cart </Link>
+            <Link href="/" className="hover:text-brandPink">
+              Home
+            </Link>
+            <Link href="/" className="hover:text-brandPink">
+              Shop
+            </Link>
+            <Link href="/" className="hover:text-brandPink">
+              Deals
+            </Link>
+            <Link href="/" className="hover:text-brandPink">
+              About
+            </Link>
+            <Link href="/" className="hover:text-brandPink">
+              Contact
+            </Link>
+            <Link href="/" className="hover:text-brandPink">
+              Logout
+            </Link>
+            <Link href="/" className="hover:text-brandPink">
+              Cart
+            </Link>
           </nav>
         </div>
         <div className="w-2/3 xl:w-1/2 flex items-center justify-between gap-8">

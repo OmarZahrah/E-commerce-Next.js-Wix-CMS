@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Button from "./Button";
 
 const slides = [
   {
@@ -61,9 +62,9 @@ const Slider = () => {
                 {slide.title}
               </h1>
               <Link href={slide.url}>
-                <button className="bg-black rounded-md px-4 py-3 text-white">
+                <Button variant="black" rounded="md">
                   Shop Now
-                </button>
+                </Button>
               </Link>
             </div>
             {/* IMAGE CONTAINER */}
