@@ -24,32 +24,25 @@ const Navbar = () => {
           </Link>
           <nav className="hidden xl:flex gap-4">
             <Link href="/" className="hover:text-brandPink">
-              {" "}
-              Home{" "}
+              Home
             </Link>
             <Link href="/" className="hover:text-brandPink">
-              {" "}
-              Shop{" "}
+              Shop
             </Link>
             <Link href="/" className="hover:text-brandPink">
-              {" "}
-              Deals{" "}
+              Deals
             </Link>
             <Link href="/" className="hover:text-brandPink">
-              {" "}
-              About{" "}
+              About
             </Link>
             <Link href="/" className="hover:text-brandPink">
-              {" "}
-              Contact{" "}
+              Contact
             </Link>
             <Link href="/" className="hover:text-brandPink">
-              {" "}
-              Logout{" "}
+              Logout
             </Link>
             <Link href="/" className="hover:text-brandPink">
-              {" "}
-              Cart{" "}
+              Cart
             </Link>
           </nav>
         </div>
