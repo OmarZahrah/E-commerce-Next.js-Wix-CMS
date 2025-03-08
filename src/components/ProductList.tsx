@@ -32,7 +32,7 @@ const ProductList = async ({
           <div className="relative w-full h-80">
             <Image
               src={product.media?.mainMedia?.image?.url || "/product.png"}
-              alt=""
+              alt="product image"
               fill
               sizes="25vw"
               className="absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500"
@@ -40,7 +40,7 @@ const ProductList = async ({
             {product.media?.items && (
               <Image
                 src={product.media?.items[1].image?.url || "/product.png"}
-                alt=""
+                alt="product second image"
                 fill
                 sizes="25vw"
                 className="absolute object-cover rounded-md"
