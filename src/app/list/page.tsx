@@ -10,7 +10,6 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
   const { collection } = await (
     await wixClient
   ).collections.getCollectionBySlug(searchParams.cat || "all-products");
-  console.log(collection);
 
   return (
     <div className="padding-section">
@@ -25,7 +24,8 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
         </div>
         <div className="relative w-1/3">
           <Image
-            src={collection?.media?.mainMedia?.image?.url || "/woman.png"}
+            // src={collection?.media?.mainMedia?.image?.url || "/woman.png"}
+            src={"/woman.png"}
             alt="campaign image"
             fill
             className="object-contain"

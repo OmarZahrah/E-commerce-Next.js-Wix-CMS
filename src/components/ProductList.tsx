@@ -55,16 +55,9 @@ const ProductList = async ({
             </span>
           </div>
           {product.additionalInfoSections && (
-            <div
-              className="text-sm text-gray-500"
-              dangerouslySetInnerHTML={{
-                __html: DOMPurify.sanitize(
-                  product.additionalInfoSections?.find(
-                    (resource) => resource.title === "SHORT DESC"
-                  )?.description || ""
-                ),
-              }}
-            ></div>
+            <div className="text-sm text-gray-500">
+              {product.description?.substring(0, 35)}...
+            </div>
           )}
           <Button variant="outline" size="lg" rounded="full">
             Add To Cart
