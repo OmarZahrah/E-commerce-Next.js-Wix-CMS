@@ -3,7 +3,15 @@
 import { useState } from "react";
 import Button from "./Button";
 
-const Add = () => {
+const Add = ({
+  productId,
+  variantId,
+  stockNumber,
+}: {
+  productId: string;
+  variantId: string;
+  stockNumber: number;
+}) => {
   const [quantity, setQuantity] = useState(1);
 
   // TEMP
@@ -38,7 +46,8 @@ const Add = () => {
             </button>
           </div>
           <div className="text-xs">
-            Only <span className="text-orange-500">4 items</span> left <br />
+            Only <span className="text-orange-500">{stockNumber} items</span>{" "}
+            left <br />
             don&apos;t miss it
           </div>
         </div>
