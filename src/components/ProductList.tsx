@@ -3,8 +3,9 @@ import Link from "next/link";
 import Button from "./Button";
 import { wixClientServer } from "@/lib/wixClientServer";
 import DOMPurify from "isomorphic-dompurify";
+import Pagination from "./Pagination";
 
-const PRODUCT_PER_PAGE = 20;
+const PRODUCT_PER_PAGE = parseInt(process.env.PRODUCT_PER_PAGE!) || 10;
 
 const ProductList = async ({
   categoryID,
@@ -88,6 +89,13 @@ const ProductList = async ({
           </Button>
         </Link>
       ))}
+      {searchParams?.cat || searchParams?.name ? (
+        <Pagination
+          currentPage={res.currentPage || 0}
+          hasPrev={res.hasPrev()}
+          hasNext={res.hasNext()}
+        />
+      ) : null}
     </div>
   );
 };

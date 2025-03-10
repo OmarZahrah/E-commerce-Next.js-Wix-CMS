@@ -45,11 +45,15 @@ const Add = ({
               +
             </button>
           </div>
-          <div className="text-xs">
-            Only <span className="text-orange-500">{stockNumber} items</span>{" "}
-            left <br />
-            don&apos;t miss it
-          </div>
+          {stockNumber < 1 ? (
+            <p className="text-sm text-gray-500">Product is out of stock.</p>
+          ) : (
+            <div className="text-xs">
+              Only <span className="text-orange-500">{stockNumber} items</span>{" "}
+              left <br />
+              don&apos;t miss it
+            </div>
+          )}
         </div>
         <Button variant="outline" size="lg" rounded="full">
           Add To Cart
