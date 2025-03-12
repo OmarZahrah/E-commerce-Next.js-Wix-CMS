@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import { wixClientServer } from "@/lib/wixClientServer";
-import DOMPurify from "isomorphic-dompurify";
 import Pagination from "./Pagination";
 
 const PRODUCT_PER_PAGE = parseInt(process.env.PRODUCT_PER_PAGE!) || 10;
