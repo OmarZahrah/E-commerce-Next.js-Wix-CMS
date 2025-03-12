@@ -1,6 +1,8 @@
 "use client";
 import { createClient, OAuthStrategy } from "@wix/sdk";
 import { products, collections } from "@wix/stores";
+import { currentCart } from "@wix/ecom";
+import { redirects } from "@wix/redirects";
 import Cookies from "js-cookie";
 import { createContext, ReactNode, useContext } from "react";
 
@@ -10,6 +12,8 @@ const wixClient = createClient({
   modules: {
     products,
     collections,
+    currentCart,
+    redirects,
   },
   auth: OAuthStrategy({
     clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID!,
@@ -23,7 +27,7 @@ const wixClient = createClient({
   }),
 });
 
-type WixClient = typeof wixClient;
+export type WixClient = typeof wixClient;
 const WixClientContext = createContext<WixClient>(wixClient);
 export const WixClientContextProvider = ({
   children,
