@@ -5,16 +5,29 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import CartModal from "./CartModal";
+import { useWixClient } from "@/context/wixContext";
+import Cookies from "js-cookie";
 
 const NavIcons = () => {
+  const wixClient = useWixClient();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const isLoggedIn = false;
+  const isLoggedIn = wixClient.auth.loggedIn();
 
   function handleProfileClick() {
     if (!isLoggedIn) router.push("/login");
     setIsProfileOpen((prev) => !prev);
+  }
+
+  async function handleLogout() {
+    setIsLoading(true);
+    Cookies.remove("refreshToken");
+    const { logoutUrl } = await wixClient.auth.logout(window.location.href);
+    router.push(logoutUrl);
+    setIsLoading(false);
+    setIsProfileOpen(false);
   }
 
   return (
@@ -28,9 +41,11 @@ const NavIcons = () => {
         onClick={handleProfileClick}
       />
       {isProfileOpen && (
-        <div className="absolute p-4 rounded-md top-12 left-0 text-sm shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-20">
+        <div className="absolute p-4 rounded-md top-12 left-0 text-sm bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-20">
           <Link href="/">Profile</Link>
-          <span className="mt-2 cursor-pointer block">Logout</span>
+          <span className="mt-2 cursor-pointer block" onClick={handleLogout}>
+            {isLoading ? "Logging Out..." : "Logout"}
+          </span>
         </div>
       )}
 
