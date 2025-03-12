@@ -12,6 +12,8 @@ const Navbar = () => {
         <Link href="/">
           <span className="text-2xl tracking-wide">ZAHRA</span>
         </Link>
+        <SearchBar />
+
         <Menu />
       </div>
 
@@ -26,7 +28,10 @@ const Navbar = () => {
             <Link href="/" className="hover:text-brandPink">
               Home
             </Link>
-            <Link href="/" className="hover:text-brandPink">
+            <Link
+              href="/list?cat=all-products"
+              className="hover:text-brandPink"
+            >
               Shop
             </Link>
             <Link href="/" className="hover:text-brandPink">
@@ -37,12 +42,6 @@ const Navbar = () => {
             </Link>
             <Link href="/" className="hover:text-brandPink">
               Contact
-            </Link>
-            <Link href="/" className="hover:text-brandPink">
-              Logout
-            </Link>
-            <Link href="/" className="hover:text-brandPink">
-              Cart
             </Link>
           </nav>
         </div>
