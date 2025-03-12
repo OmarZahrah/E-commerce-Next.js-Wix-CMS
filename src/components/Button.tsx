@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "outline" | "black";
+  variant?: "primary" | "outline" | "black" | "transparent";
   size?: "sm" | "md" | "lg" | "xl";
   fullWidth?: boolean;
   rounded?: "sm" | "md" | "full";
@@ -23,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
     outline:
       "ring-1 ring-brandPink text-brandPink hover:bg-brandPink hover:text-white",
     black: "bg-black text-white hover:opacity-80",
+    transparent: "text:black ring-1 ring-gray-300 hover:opacity-80",
   };
 
   const sizeStyles = {

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Button from "./Button";
+import { useWixClient } from "@/context/wixContext";
+import { useCartStore } from "@/hooks/useCartStore";
 
 const Add = ({
   productId,
@@ -13,7 +15,7 @@ const Add = ({
   stockNumber: number;
 }) => {
   const [quantity, setQuantity] = useState(1);
-
+  const wixClient = useWixClient();
   // TEMP
   const stock = 4;
 
@@ -24,6 +26,8 @@ const Add = ({
       setQuantity((q) => q - 1);
     }
   }
+
+  const { addItem, isLoading } = useCartStore();
 
   return (
     <div className="flex flex-col gap-4">
@@ -55,7 +59,12 @@ const Add = ({
             </div>
           )}
         </div>
-        <Button variant="outline" size="lg" rounded="full">
+        <Button
+          variant="outline"
+          size="lg"
+          rounded="full"
+          onClick={() => addItem(wixClient, productId, variantId, quantity)}
+        >
           Add To Cart
         </Button>
       </div>

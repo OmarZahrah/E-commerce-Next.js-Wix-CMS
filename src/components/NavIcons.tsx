@@ -7,6 +7,7 @@ import { useState } from "react";
 import CartModal from "./CartModal";
 import { useWixClient } from "@/context/wixContext";
 import Cookies from "js-cookie";
+import { useCartStore } from "@/hooks/useCartStore";
 
 const NavIcons = () => {
   const wixClient = useWixClient();
@@ -15,6 +16,7 @@ const NavIcons = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const isLoggedIn = wixClient.auth.loggedIn();
+  const { cart, counter, getCart } = useCartStore();
 
   function handleProfileClick() {
     if (!isLoggedIn) router.push("/login");
@@ -68,7 +70,7 @@ const NavIcons = () => {
           className="cursor-pointer"
         />
         <span className="absolute -top-4 -right-4 w-5 h-5 bg-brandPink rounded-full text-white text-sm flex items-center justify-center">
-          1
+          {counter}
         </span>
       </div>
       {isCartOpen && <CartModal />}
