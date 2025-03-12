@@ -1,37 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 E-Commerce Store with CMS Dashboard (Wix)
 
-## Getting Started
+This is a **fully-featured e-commerce store** built with **Next.js** and **Tailwind CSS**, using **Wix as a CMS dashboard** to manage products dynamically. The store supports essential e-commerce functionalities such as product customization, sorting, filtering, authentication, and more.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🛍️ E-Commerce Functionalities
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Product Searching, Filtering, and Sorting**
+- **Cart Management** (Add, Remove, Update Quantities)
+- **Product Customization** (Variants, Sizes, Quantities)
+- **Pagination** for efficient product browsing
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 🔐 Authentication
 
-## Learn More
+- **Secure User Authentication**
+- **Protected Routes for Logged-in Users**
+- **Session Handling**
 
-To learn more about Next.js, take a look at the following resources:
+### 🖥️ CMS with Wix
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Dynamic Data Management** (All product data is fetched from Wix)
+- **Real-time Product Updates**
+- **Centralized Product & Inventory Control**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# E-commerce-nextjs
+- **[Next.js](https://nextjs.org/)** – React framework for server-rendered and statically generated web apps
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first CSS framework for rapid UI development
+- **[Zustand](https://zustand-demo.pmnd.rs/)** – Lightweight state management for better performance
+- **[Wix Headless](https://dev.wix.com/docs/api/wix-headless)** – CMS for managing store products dynamically
+- **[Auth.js](https://authjs.dev/)** – Authentication library for secure user login
