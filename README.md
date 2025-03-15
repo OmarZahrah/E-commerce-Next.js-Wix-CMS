@@ -34,3 +34,30 @@ This is a **fully-featured e-commerce store** built with **Next.js** and **Tailw
 - **[Zustand](https://zustand-demo.pmnd.rs/)** – Lightweight state management for better performance
 - **[Wix Headless](https://dev.wix.com/docs/api/wix-headless)** – CMS for managing store products dynamically
 - **[Auth.js](https://authjs.dev/)** – Authentication library for secure user login
+
+## Screenshots
+
+![Homepage Screenshot](./public/Screenshots/home.jpg)
+</br>
+</br>
+![Featured Products](./public/Screenshots/home2.jpg)
+</br>
+</br>
+![Product Page](./public/Screenshots/about.jpg)
+</br>
+</br>
+![Category Page](./public/Screenshots/products.jpg)
+</br>
+</br>
+![Strapi Dashboard](./public/Screenshots/product.jpg)
+</br>
+</br>
+![Strapi Dashboard](./public/Screenshots/profile.jpg)
+</br>
+</br>
+![Strapi Dashboard](./public/Screenshots/cart.jpg)
+</br>
+</br>
+![Strapi Dashboard](./public/Screenshots/contact.jpg)
+</br>
+</br>
