@@ -12,7 +12,7 @@ const CategoryList = async () => {
           <Link
             key={category._id}
             href={`/list?cat=${category.slug}`}
-            className="w-full flex-shrink-0 sm:w-1/2 lg:w-1/4 xl:w-1/6"
+            className="w-full  flex-shrink-0 sm:w-1/2 lg:w-1/4 xl:w-1/6"
           >
             <div className="relative  w-full h-96 bg-slate-100">
               <Image

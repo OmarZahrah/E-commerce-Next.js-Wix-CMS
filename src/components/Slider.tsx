@@ -4,17 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "./Button";
-import home1 from "/public/home1.jpg";
+import home5 from "/public/home5.jpg";
 import home2 from "/public/home2.jpg";
 import home3 from "/public/home3.jpg";
+import home4 from "/public/home4.jpg";
 
 const slides = [
   {
     id: 1,
     title: "Summer Sale Collections",
     description: "Sale! Up to 50% off!",
+    img: home5,
 
-    img: home2,
     url: "/",
     bg: "bg-gradient-to-r from-blue-50 to-yellow-50",
   },
@@ -22,16 +23,18 @@ const slides = [
     id: 2,
     title: "Winter Sale Collections",
     description: "Sale! Up to 50% off!",
+    img: home3,
 
-    img: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    // img: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     url: "/",
     bg: "bg-gradient-to-r from-yellow-50 to-pink-50",
   },
   {
     id: 3,
     title: "Spring Sale Collections",
+    img: home4,
 
-    img: "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    // img: "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     description: "Sale! Up to 50% off!",
     url: "/",
     bg: "bg-gradient-to-r from-pink-50 to-blue-50",
