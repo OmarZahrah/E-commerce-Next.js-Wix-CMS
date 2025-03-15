@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Button from "./Button";
 import home5 from "/public/home5.jpg";
-import home2 from "/public/home2.jpg";
 import home3 from "/public/home3.jpg";
 import home4 from "/public/home4.jpg";
 

@@ -69,7 +69,7 @@ const NavIcons = () => {
           height={22}
           className="cursor-pointer"
         />
-        <span className="absolute -top-4 -right-4 w-5 h-5 bg-brandPink rounded-full text-white text-sm flex items-center justify-center">
+        <span className="absolute -top-4 -right-4 w-5 h-5 bg-colorBrandPrimary rounded-full text-white text-sm flex items-center justify-center">
           {counter}
         </span>
       </div>

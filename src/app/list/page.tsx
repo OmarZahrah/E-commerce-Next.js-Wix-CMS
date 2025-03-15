@@ -14,7 +14,7 @@ const ListPage = async ({ searchParams }: { searchParams: any }) => {
   return (
     <div className="padding-section">
       {/* CAMPAIGN */}
-      <div className=" hidden h-64 sm:flex justify-between p-4 bg-pink-50">
+      <div className=" hidden h-64 sm:flex justify-between p-4 bg-colorCampaign">
         <div className="w-2/3 flex flex-col items-center justify-center gap-8">
           <h1 className="text-4xl font-semibold leading-[48px] text-gray-700">
             Grab up to 50% off on

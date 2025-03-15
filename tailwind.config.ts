@@ -14,7 +14,10 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        brandPink: "#F35C7A",
+        // colorBrandPrimary: "#F35C7A",
+        colorBrandPrimary: "#315e8d",
+        colorBrandHover: "#4674a3",
+        colorCampaign: "#e6eff7",
       },
     },
   },

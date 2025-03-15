@@ -5,7 +5,6 @@ import { wixClientServer } from "@/lib/wixClientServer";
 import { notFound } from "next/navigation";
 
 const SinglePage = async ({ params }: { params: { slug: string } }) => {
-  console.log(params);
   const wixClient = await wixClientServer();
   const { items } = await wixClient.products
     .queryProducts()
@@ -15,7 +14,6 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
   if (!items[0]) return notFound();
 
   const product = items[0];
-  console.log(product);
 
   return (
     <div className="padding-section flex flex-col lg:flex-row gap-16">
@@ -26,7 +24,9 @@ const SinglePage = async ({ params }: { params: { slug: string } }) => {
       {/* CONTENT */}
       <div className="w-full lg:w-1/2 flex flex-col gap-6">
         <h1 className="text-4xl font-medium">{product.name}</h1>
-        <p className="text-gray-500">{product.description}</p>
+        <p className="text-gray-500">
+          {product.description?.substring(3, product.description.length - 4)}
+        </p>
         <hr className="h-[2px] bg-gray-100" />
         {product.priceData?.price === product.priceData?.discountedPrice ? (
           <h2 className="font-medium text-2xl">

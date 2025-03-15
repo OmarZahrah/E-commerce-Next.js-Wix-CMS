@@ -19,9 +19,9 @@ const Button: React.FC<ButtonProps> = ({
   const baseStyles = `rounded-${rounded} py-2 px-4 text-sm transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed`;
 
   const variantStyles = {
-    primary: "bg-brandPink text-white hover:opacity-80",
+    primary: "bg-colorBrandPrimary text-white hover:opacity-80",
     outline:
-      "ring-1 ring-brandPink text-brandPink hover:bg-brandPink hover:text-white",
+      "ring-1 ring-colorBrandPrimary text-colorBrandPrimary hover:bg-colorBrandPrimary hover:text-white",
     black: "bg-black text-white hover:opacity-80",
     transparent: "text:black ring-1 ring-gray-300 hover:opacity-80",
   };

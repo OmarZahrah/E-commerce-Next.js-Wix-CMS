@@ -10,7 +10,9 @@ const Navbar = () => {
       {/* Mobile Screens */}
       <div className="md:hidden flex justify-between items-center h-full ">
         <Link href="/">
-          <span className="text-2xl tracking-wide">ZAHRA</span>
+          <span className="text-2xl tracking-wide text-colorBrandPrimary font-bold">
+            Moda
+          </span>
         </Link>
         <SearchBar />
 
@@ -21,26 +23,26 @@ const Navbar = () => {
       <div className="hidden md:flex items-center justify-between gap-8 h-full">
         <div className="w-1/3 xl:w-1/2 flex items-center gap-12 ">
           <Link href="/" className="flex gap-3 items-center ">
-            <Image src="/logo.png" alt="logo" width={24} height={24} />
-            <span className="text-2xl tracking-wide">ZAHRA</span>
+            {/* <Image src="/logo.png" alt="logo" width={24} height={24} /> */}
+            <span className="text-2xl tracking-wide text-colorBrandPrimary font-bold">
+              Moda
+            </span>
           </Link>
           <nav className="hidden xl:flex gap-4">
-            <Link href="/" className="hover:text-brandPink">
+            <Link href="/" className="hover:text-colorBrandPrimary">
               Home
             </Link>
             <Link
               href="/list?cat=all-products"
-              className="hover:text-brandPink"
+              className="hover:text-colorBrandPrimary"
             >
               Shop
             </Link>
-            <Link href="/" className="hover:text-brandPink">
-              Deals
-            </Link>
-            <Link href="/" className="hover:text-brandPink">
+
+            <Link href="/about" className="hover:text-colorBrandPrimary">
               About
             </Link>
-            <Link href="/" className="hover:text-brandPink">
+            <Link href="/contact" className="hover:text-colorBrandPrimary">
               Contact
             </Link>
           </nav>

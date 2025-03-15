@@ -91,11 +91,11 @@ const CustomizeProducts = ({
                   style={{
                     cursor: disabled ? "not-allowed" : "pointer",
                     backgroundColor: selected
-                      ? "#f35c7a"
+                      ? "#315e8d"
                       : disabled
-                      ? "#FBCFE8"
+                      ? "#4674a3"
                       : "white",
-                    color: selected || disabled ? "white" : "#f35c7a",
+                    color: selected || disabled ? "white" : "#315e8d",
                     boxShadow: disabled ? "none" : "",
                   }}
                   key={choice.description}

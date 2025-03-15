@@ -6,13 +6,19 @@ const Filter = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { replace } = useRouter();
-
+  console.log(searchParams.toString());
   function handleFilterChange(
     e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
   ) {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
     const params = new URLSearchParams(searchParams);
-    params.set(name, value);
+    console.log(name);
+    if (name === "cat") {
+      value = `${searchParams.get("cat")} ${value}`;
+      params.set(name, value);
+    } else {
+      params.set(name, value);
+    }
     replace(`${pathname}?${params.toString()}`);
   }
 
@@ -49,9 +55,11 @@ const Filter = () => {
           className="py-2 px-4 rounded-2xl text-xs font-medium bg-[#EBEDED]"
           onChange={handleFilterChange}
         >
-          <option>Category</option>
-          <option value="">New Arrival</option>
-          <option value="">Popular</option>
+          <option value="all-products">All</option>
+          <option value="t-shirts">T-shirt</option>
+          <option value="shirts">Shirts</option>
+          <option value="jackets">Jackets</option>
+          <option value="pants">Shorts & Pants</option>
         </select>
         <select
           name=""
