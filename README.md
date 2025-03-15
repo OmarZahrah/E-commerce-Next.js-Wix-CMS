@@ -52,6 +52,9 @@ This is a **fully-featured e-commerce store** built with **Next.js** and **Tailw
 ![Strapi Dashboard](./public/Screenshots/product.jpg)
 </br>
 </br>
+![Strapi Dashboard](./public/Screenshots/login.jpg)
+</br>
+</br>
 ![Strapi Dashboard](./public/Screenshots/profile.jpg)
 </br>
 </br>
