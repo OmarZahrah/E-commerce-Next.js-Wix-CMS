@@ -142,7 +142,7 @@ const LoginPage = () => {
               type="text"
               name="username"
               placeholder="john"
-              className="ring-2 ring-gray-300 rounded-md p-4 outline-none"
+              className="ring-2 ring-gray-300 rounded-md p-4"
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
@@ -154,7 +154,7 @@ const LoginPage = () => {
               type="email"
               name="email"
               placeholder="john@gmail.com"
-              className="ring-2 ring-gray-300 rounded-md p-4 outline-none"
+              className="ring-2 ring-gray-300 rounded-md p-4"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -165,7 +165,7 @@ const LoginPage = () => {
               type="text"
               name="emailCode"
               placeholder="Code"
-              className="ring-2 ring-gray-300 rounded-md p-4 outline-none"
+              className="ring-2 ring-gray-300 rounded-md p-4"
               onChange={(e) => setEmailCode(e.target.value)}
             />
           </div>
@@ -177,7 +177,7 @@ const LoginPage = () => {
               type="password"
               name="password"
               placeholder="Enter your password"
-              className="ring-2 ring-gray-300 rounded-md p-4 outline-none"
+              className="ring-2 ring-gray-300 rounded-md p-4"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
@@ -190,7 +190,7 @@ const LoginPage = () => {
             Forgot Password?
           </div>
         )}
-        <Button fullWidth rounded="md" disabled={isLoading}>
+        <Button disabled={isLoading} fullWidth rounded="md">
           {isLoading ? "Loading..." : buttonTitle}
         </Button>
         {error && <div className="text-red-600">{error}</div>}
