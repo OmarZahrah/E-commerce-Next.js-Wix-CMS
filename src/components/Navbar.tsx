@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 const NavIcons = dynamic(() => import("./NavIcons"), { ssr: false });
 const Navbar = () => {
   return (
-    <header className="h-20 padding-section relative ">
+    <header className="h-20 padding-section relative overflow-x-clip ">
       {/* Mobile Screens */}
       <div className="md:hidden flex justify-between items-center h-full ">
         <Link href="/">

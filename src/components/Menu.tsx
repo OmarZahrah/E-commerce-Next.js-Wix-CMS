@@ -20,9 +20,7 @@ const Menu = () => {
       {/* {open && ( */}
       <nav
         className={`absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-5rem)] flex flex-col items-center justify-center gap-8 text-xl z-10 bg-opacity-90 transition-all ease-in-out duration-1000
-          ${open ? "block" : "hidden"} z-50`}
-        // className={`absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-5rem)] flex flex-col items-center justify-center gap-8 text-xl z-10 bg-opacity-90 transition-all ease-in-out duration-1000
-        //   ${open ? "translate-x-0" : "translate-x-[100%]"} overflow-x-hidden `}
+          ${open ? "translate-x-0" : "translate-x-[100%]"}  z-50 `}
       >
         <Link href="/" className="hover:text-colorBrandPrimary">
           Home
@@ -45,9 +43,7 @@ const Menu = () => {
         <Link href="/" className="hover:text-colorBrandPrimary">
           Logout
         </Link>
-        <Link href="/" className="hover:text-colorBrandPrimary">
-          Cart
-        </Link>
+        <p className="hover:text-colorBrandPrimary">Cart</p>
       </nav>
       {/* )} */}
     </div>
