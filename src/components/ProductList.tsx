@@ -51,9 +51,9 @@ const ProductList = async ({
         <Link
           key={product._id}
           href={`/${product.slug}`}
-          className="w-full flex flex-col gap-4 sm:w-[45%] lg:w-[22%] "
+          className="w-full  flex flex-col gap-4 sm:w-[45%] lg:w-[22%] "
         >
-          <div className="relative w-full h-80">
+          <div className="relative  w-full min-h-96">
             <Image
               src={product.media?.mainMedia?.image?.url || "/product.png"}
               alt="product image"
